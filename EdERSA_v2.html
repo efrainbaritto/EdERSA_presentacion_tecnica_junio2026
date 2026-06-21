@@ -50,7 +50,63 @@
     mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 75%);
   }
   .gradient-text { background: linear-gradient(135deg, #00E676 0%, #26D7EE 60%, #00BCD4 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .card { background: linear-gradient(180deg, rgba(18,52,51,.7), rgba(11,37,36,.7)); border: 1px solid rgba(143,176,168,.16); }
+  .card{
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16,41,39,.92),
+      rgba(8,26,25,.92)
+    );
+
+  border:1px solid rgba(0,230,118,.14);
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.02) inset,
+    0 20px 60px rgba(0,0,0,.25);
+}
+
+.card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0,230,118,.08),
+      transparent 45%
+    );
+
+  pointer-events:none;
+}
+     .page-inner{
+  position:relative;
+}
+
+.page-inner::before{
+  content:'';
+  position:absolute;
+
+  width:700px;
+  height:700px;
+
+  top:-250px;
+  right:-250px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,230,118,.10),
+      transparent 70%
+    );
+
+  filter:blur(90px);
+
+  pointer-events:none;
+}
   .card:hover { border-color: rgba(0,230,118,.4); }
   .chip { background: rgba(0,230,118,.10); border: 1px solid rgba(0,230,118,.28); color: #7BE8B0; }
   .chip-aqua { background: rgba(38,215,238,.10); border: 1px solid rgba(38,215,238,.30); color: #8BE5F2; }
