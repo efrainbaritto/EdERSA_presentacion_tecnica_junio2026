@@ -35,7 +35,44 @@
   };
 </script>
 <style>
-  html { scroll-behavior: smooth; }
+.icon-wrap{
+  width:72px;
+  height:72px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:18px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,230,118,.12),
+      rgba(0,230,118,.02)
+    );
+
+  border:1px solid rgba(0,230,118,.18);
+
+  box-shadow:
+    0 0 30px rgba(0,230,118,.12);
+
+  margin-bottom:18px;
+}
+
+.icon-wrap svg{
+  width:34px;
+  height:34px;
+
+  stroke:#00E676;
+  stroke-width:2;
+
+  filter:
+    drop-shadow(
+      0 0 10px rgba(0,230,118,.35)
+    );
+}    
+html { scroll-behavior: smooth; }
   body { background: #08201F; color: #E6F2EE; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden; }
   .display { font-family: 'Inter Tight', sans-serif; letter-spacing: -0.02em; }
   .mesh {
